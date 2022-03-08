@@ -2,7 +2,7 @@ CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 NAME	=	array
-FILES	=	main.cpp Array.cpp
+FILES	=	main.cpp
 
 OBJ		=	$(FILES:.cpp=.o)
 
