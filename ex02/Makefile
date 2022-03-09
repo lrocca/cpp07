@@ -3,21 +3,16 @@ CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 NAME	=	array
 FILES	=	main.cpp
+HEADERS	=	Array.hpp Array.tpp
 
 OBJ		=	$(FILES:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+$(NAME): $(FILES) $(HEADERS)
+	$(CXX) $(CXXFLAGS) -o $@ $<
 
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c -o $@ $<
-
-clean:
-	$(RM) $(OBJ)
-
-fclean: clean
-	$(RM) $(NAME) $(TEST)
+fclean:
+	$(RM) $(NAME)
 
 re: fclean all
