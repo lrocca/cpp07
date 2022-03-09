@@ -7,7 +7,7 @@ template <typename T>
 Array<T>::Array(): _array(nullptr), _size(0) {}
 
 template <typename T>
-Array<T>::Array(unsigned int n): _array(nullptr), _size(n)
+Array<T>::Array(unsigned int size): _array(nullptr), _size(size)
 {
 	_array = new T[_size];
 }

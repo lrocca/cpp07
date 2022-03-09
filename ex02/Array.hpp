@@ -12,7 +12,7 @@ class Array
 
 	public:
 		Array();
-		Array(unsigned int n);
+		Array(unsigned int size);
 		Array(const Array<T>& other);
 		~Array();
 
