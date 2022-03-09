@@ -9,6 +9,8 @@ Array<T>::Array(): _array(nullptr), _size(0) {}
 template <typename T>
 Array<T>::Array(unsigned int size): _array(nullptr), _size(size)
 {
+	if (!size)
+		throw InvalidSizeException();
 	_array = new T[_size];
 }
 
@@ -51,6 +53,11 @@ unsigned int	Array<T>::size(void) const
 template <typename T>
 const char*	Array<T>::OutOfBoundsException::what() const throw() {
 	return "index out of bounds";
+}
+
+template <typename T>
+const char*	Array<T>::InvalidSizeException::what() const throw() {
+	return "size can't be zero";
 }
 
 #endif

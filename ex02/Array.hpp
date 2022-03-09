@@ -25,6 +25,10 @@ class Array
 		{
 			virtual const char*	what() const throw();
 		};
+		class InvalidSizeException: public std::exception
+		{
+			virtual const char*	what() const throw();
+		};
 };
 
 #endif
